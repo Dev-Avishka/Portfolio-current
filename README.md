@@ -1,54 +1,57 @@
-# React + TypeScript + Vite
+# DevAvishka - Portfolio
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+Welcome to my personal portfolio website! Here, you'll find information about me, my skills, projects, and experiences. Feel free to explore and learn more about my work.
 
-Currently, two official plugins are available:
+## 🚀 About Me
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react) uses [Babel](https://babeljs.io/) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
+I'm DevAvishka, a passionate developer and a lifelong learner. This portfolio showcases the projects I've worked on, my technical skills, and some details about my journey in the world of technology. Whether you're looking for a collaboration or just want to explore my work, I'm excited to connect with you!
 
-## Expanding the ESLint configuration
+## 🌐 Website
 
-If you are developing a production application, we recommend updating the configuration to enable type-aware lint rules:
+[Visit my Portfolio Website](https://devavishka.netlify.app/)
 
-```js
-export default tseslint.config({
-  extends: [
-    // Remove ...tseslint.configs.recommended and replace with this
-    ...tseslint.configs.recommendedTypeChecked,
-    // Alternatively, use this for stricter rules
-    ...tseslint.configs.strictTypeChecked,
-    // Optionally, add this for stylistic rules
-    ...tseslint.configs.stylisticTypeChecked,
-  ],
-  languageOptions: {
-    // other options...
-    parserOptions: {
-      project: ['./tsconfig.node.json', './tsconfig.app.json'],
-      tsconfigRootDir: import.meta.dirname,
-    },
-  },
-})
-```
+## 🛠️ Technologies & Tools
 
-You can also install [eslint-plugin-react-x](https://github.com/Rel1cx/eslint-react/tree/main/packages/plugins/eslint-plugin-react-x) and [eslint-plugin-react-dom](https://github.com/Rel1cx/eslint-react/tree/main/packages/plugins/eslint-plugin-react-dom) for React-specific lint rules:
+In this portfolio, I highlight the various tools and technologies I use to build websites and applications:
 
-```js
-// eslint.config.js
-import reactX from 'eslint-plugin-react-x'
-import reactDom from 'eslint-plugin-react-dom'
+- **HTML5**
+- **CSS3**
+- **JavaScript**
+- **React**
+- **Node.js**
+- **Git & GitHub**
+- **Netlify (for deployment)**
 
-export default tseslint.config({
-  plugins: {
-    // Add the react-x and react-dom plugins
-    'react-x': reactX,
-    'react-dom': reactDom,
-  },
-  rules: {
-    // other rules...
-    // Enable its recommended typescript rules
-    ...reactX.configs['recommended-typescript'].rules,
-    ...reactDom.configs.recommended.rules,
-  },
-})
-```
+## 📂 Projects
+
+On this website, you can view the different projects I’ve worked on. These projects reflect my skills in web development, and each one demonstrates my ability to work with various technologies. Feel free to check them out and let me know your thoughts.
+
+## 📝 Contact
+
+You can reach me via email or social media:
+
+- **Email**: [dabdissanayake@gmail.com]
+- **LinkedIn**: [https://www.linkedin.com/in/dev-avishka-65ba5a325/]
+- **GitHub**: [https://github.com/Dev-Avishka/]
+
+## 🏗️ Deployment
+
+This portfolio website is built using:
+
+- **React** for the frontend
+- **Netlify** for hosting and deployment
+
+To deploy your own version of this site, follow these steps:
+
+1. Clone this repository: `git clone https://github.com/your-username/portfolio.git`
+2. Customize the content, including the projects and personal details.
+3. Push the changes to your own GitHub repository.
+4. Link the repository to Netlify for automatic deployment.
+
+## 🧑‍💻 Let's Connect
+
+I’m always open to collaborating on new projects, so feel free to reach out. Thank you for visiting my portfolio!
+
+---
+
+Made with ❤️ by DevAvishka

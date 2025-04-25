@@ -1,6 +1,6 @@
 import './styles/app.universal.css'
 import './styles/settings.css'
-
+import Footer from './components/footer'
 export default function Settings(){
     return(
         <div className='app'>
@@ -15,8 +15,10 @@ export default function Settings(){
                     <h2>Created by Dev Avishka</h2>
                 </div>
                 <div className='bar'>
-                    <h2></h2>
+                    <h2>MIT License</h2>
                 </div>
+
+                <Footer></Footer>
             </div>
         </div>
     )

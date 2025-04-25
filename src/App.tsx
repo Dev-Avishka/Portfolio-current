@@ -8,8 +8,11 @@ import defaultIcon from './pages/default_icon.png';
 import about from './icons/about.png'
 import projects from './icons/projects.png'
 import contact from './icons/contact.png';
+import settings from './icons/settings.png';
 import Settings from './pages/settings';
-
+import skills from './icons/skills.png'
+import cloud from './icons/cloud.png'
+import Skills from './pages/skills';
 function App() {
   const [currentApp, setCurrentApp] = useState("home");
   const [showHomeScreen, setShowHomeScreen] = useState(true);
@@ -20,15 +23,13 @@ function App() {
     { id: "about", name: "About Me", icon: about },
     { id: "projects", name: "Projects", icon: projects },
     { id: "contact", name: "Contact", icon: contact },
-    { id: "skills", name: "Skills", icon: defaultIcon },
+    { id: "skills", name: "Skills", icon: skills },
     { id: "education", name: "Education", icon: defaultIcon },
     { id: "resume", name: "Resume", icon: defaultIcon },
     { id: "blog", name: "Blog", icon: defaultIcon },
-    { id: "achievements", name: "Achievements", icon: defaultIcon },
-    { id: "gallery", name: "Gallery", icon: defaultIcon },
-    { id: "testimonials", name: "Testimonials", icon: defaultIcon },
+    { id: "cloud", name: "Cloud", icon: cloud },
     { id: "hobbies", name: "Hobbies", icon: defaultIcon },
-    { id: "settings", name: "Settings", icon: defaultIcon }
+    { id: "settings", name: "Settings", icon: settings }
   ];
   
   // Update time every minute
@@ -69,6 +70,8 @@ function App() {
         return <Contact />;
       case "settings":
         return <Settings />;
+      case "skills":
+        return <Skills />;
       default:
         return <div className="app">App "{currentApp}" coming soon!</div>;
     }
@@ -84,6 +87,7 @@ function App() {
             </div>
             <div className='status-right'>
               <span className='status-icon'>📶</span>
+              <span className='status-icon'>🛜</span>
               <span className='status-icon'>📱</span>
               <span className='status-icon'>🔋</span>
             </div>
