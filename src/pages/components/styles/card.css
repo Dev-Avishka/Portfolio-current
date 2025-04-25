@@ -1,0 +1,199 @@
+/*  styles/card.css Card component with flip functionality */
+
+
+
+
+.card-container {
+    perspective: 1000px;
+    width: 100%;
+    height: 350px;
+    margin-bottom: 20px;
+  }
+  
+  .card {
+    position: relative;
+    width: 100%;
+    height: 100%;
+    transform-style: preserve-3d;
+    transition: transform 0.8s ease;
+    cursor: pointer;
+    border-radius: 12px;
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
+  }
+  
+  .card.flipped {
+    transform: rotateY(180deg);
+  }
+  
+  .card-front, .card-back {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    backface-visibility: hidden;
+    border-radius: 12px;
+    overflow: hidden;
+    display: flex;
+    flex-direction: column;
+    padding: 20px;
+    box-sizing: border-box;
+  }
+  
+  .card-front {
+    background: linear-gradient(145deg, #ffffff, #f0f0f0);
+    border: 1px solid #e0e0e0;
+    align-items: center;
+    justify-content: space-between;
+  }
+  
+  .card-back {
+    background: linear-gradient(145deg, #e8f4fc, #d0e8f5);
+    transform: rotateY(180deg);
+    border: 1px solid #c0d8e8;
+    justify-content: space-between;
+  }
+  
+  .card-title {
+    font-size: 20px;
+    font-weight: 600;
+    margin-bottom: 15px;
+    color: #333;
+    text-align: center;
+  }
+  
+  .card-image-container {
+    width: 80%;
+    height: 200px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    overflow: hidden;
+    border-radius: 10px;
+    box-shadow: 0 3px 10px rgba(0, 0, 0, 0.1);
+  }
+  
+  .card-image {
+    width: 100%;
+    height: auto;
+    object-fit: contain;
+    transition: transform 0.3s ease;
+  }
+  
+  .card:hover .card-image {
+    transform: scale(1.05);
+  }
+  
+  .card-description {
+    font-size: 16px;
+    line-height: 1.5;
+    color: #444;
+    margin-bottom: 20px;
+    flex-grow: 1;
+    overflow-y: auto;
+    padding-right: 5px;
+  }
+  
+  /* Custom scrollbar for the description */
+  .card-description::-webkit-scrollbar {
+    width: 5px;
+  }
+  
+  .card-description::-webkit-scrollbar-track {
+    background: rgba(0, 0, 0, 0.05);
+    border-radius: 10px;
+  }
+  
+  .card-description::-webkit-scrollbar-thumb {
+    background: rgba(0, 0, 0, 0.2);
+    border-radius: 10px;
+  }
+  
+  .card-button {
+    background-color: #007bff;
+    color: white;
+    padding: 10px 15px;
+    border-radius: 6px;
+    text-decoration: none;
+    font-weight: 500;
+    display: inline-block;
+    text-align: center;
+    transition: background-color 0.3s, transform 0.2s;
+    margin-top: 15px;
+    border: none;
+    cursor: pointer;
+  }
+  
+  .card-button:hover {
+    background-color: #0056b3;
+    transform: translateY(-2px);
+  }
+  
+  .card-flip-hint, .card-flip-back {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 12px;
+    color: #777;
+    margin-top: 15px;
+    opacity: 0.7;
+  }
+  
+  .flip-icon {
+    margin-right: 5px;
+    animation: rotate 2s infinite ease-in-out;
+    display: inline-block;
+  }
+  
+  @keyframes rotate {
+    0% {
+      transform: rotate(0deg);
+    }
+    50% {
+      transform: rotate(180deg);
+    }
+    100% {
+      transform: rotate(360deg);
+    }
+  }
+  
+  /* Responsive styles */
+  @media (max-width: 1200px) {
+    .card-container {
+      height: 320px;
+    }
+  }
+  
+  @media (max-width: 992px) {
+    .card-container {
+      height: 300px;
+    }
+  }
+  
+  @media (max-width: 768px) {
+    .card-container {
+      height: 280px;
+    }
+    
+    .card-title {
+      font-size: 18px;
+    }
+    
+    .card-description {
+      font-size: 14px;
+    }
+  }
+  
+  @media (max-width: 480px) {
+    .card-container {
+      height: 260px;
+    }
+    
+    .card-image-container {
+      width: 80%;
+      height: 120px;
+    }
+    
+    .card-button {
+      padding: 8px 12px;
+      font-size: 14px;
+    }
+  }
