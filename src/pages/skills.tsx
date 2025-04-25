@@ -8,7 +8,7 @@ export default function Skills(){
             <div className='languages'>
                 <h1>Languages I know</h1>
                 <div className='box_langs'>
-                    
+                    why
                 </div>
             </div>
             <div className='frameworks'>
