@@ -1,0 +1,113 @@
+/* Add this to your education.css file */
+
+.timeline-container {
+    width: 100%;
+    max-width: 600px;
+    margin: 2rem auto;
+    padding: 1rem;
+  }
+  
+  .timeline-title {
+    text-align: center;
+    margin-bottom: 2rem;
+    color: #2d3748;
+  }
+  
+  .timeline-single-column {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    position: relative;
+  }
+  
+  .timeline-item-wrapper {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width: 100%;
+  }
+  
+  .timeline-item {
+    width: 100%;
+    margin-bottom: 1rem;
+  }
+  
+  .timeline-content {
+    width: 100%;
+    transition: all 0.3s ease;
+    background-color: #f7fafc;
+    border-radius: 0.5rem;
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+    overflow: hidden;
+  }
+  
+  .timeline-content.hovered {
+    transform: translateY(-5px);
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.15);
+  }
+  
+  .timeline-date {
+    background-color: #3182ce;
+    color: white;
+    padding: 0.5rem 1rem;
+    font-weight: bold;
+  }
+  
+  .timeline-box {
+    padding: 1.5rem;
+  }
+  
+  .timeline-box h3 {
+    margin: 0 0 0.5rem 0;
+    color: #2d3748;
+  }
+  
+  .timeline-box h4 {
+    margin: 0 0 1rem 0;
+    color: #4a5568;
+    font-weight: 500;
+  }
+  
+  .timeline-box p {
+    margin: 0;
+    color: #718096;
+  }
+  
+  /* Vertical connector between timeline items */
+  .timeline-connector-vertical {
+    height: 3rem;
+    display: flex;
+    justify-content: center;
+    width: 100%;
+    margin-bottom: 1rem;
+  }
+  
+  .connector-line-vertical {
+    width: 3px;
+    height: 100%;
+    background-color: #3182ce;
+  }
+  
+  /* Styling for current vs past education items */
+  .timeline-item.current .timeline-date {
+    background-color: #38a169;
+  }
+  
+  .timeline-item.current .timeline-content {
+    border-left: 4px solid #38a169;
+  }
+  
+  .timeline-item.past .timeline-content {
+    border-left: 4px solid #3182ce;
+  }
+  
+  /* Responsive adjustments */
+  @media (max-width: 640px) {
+    .timeline-container {
+      padding: 0.5rem;
+    }
+    
+    .timeline-box {
+      padding: 1rem;
+    }
+  }

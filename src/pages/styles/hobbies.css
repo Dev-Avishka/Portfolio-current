@@ -1,0 +1,82 @@
+/* Add this to a new file called hobbies.css */
+
+.hobbies-container {
+    width: 100%;
+    max-width: 800px;
+    margin: 2rem auto;
+    padding: 1rem;
+  }
+  
+  .hobbies-title {
+    text-align: center;
+    margin-bottom: 2rem;
+    color: #2d3748;
+  }
+  
+  .hobbies-list {
+    display: flex;
+    flex-direction: column;
+    gap: 1.5rem;
+  }
+  
+  .hobby-item {
+    width: 100%;
+  }
+  
+  .hobby-content {
+    display: flex;
+    background-color: #f7fafc;
+    border-radius: 0.5rem;
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+    overflow: hidden;
+    transition: all 0.3s ease;
+  }
+  
+  .hobby-content.hovered {
+    transform: translateY(-5px);
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.15);
+  }
+  
+  .hobby-image-container {
+    flex-shrink: 0;
+  }
+  
+  .hobby-image {
+    width: 150px;
+    height: 150px;
+    object-fit: cover;
+    display: block;
+  }
+  
+  .hobby-info {
+    padding: 1.5rem;
+    flex-grow: 1;
+  }
+  
+  .hobby-title {
+    margin: 0 0 0.5rem 0;
+    color: #2d3748;
+    font-size: 1.25rem;
+  }
+  
+  .hobby-description {
+    margin: 0;
+    color: #718096;
+    line-height: 1.5;
+  }
+  
+  /* Make it responsive */
+  @media (max-width: 640px) {
+    .hobby-content {
+      flex-direction: column;
+    }
+    
+    .hobby-image {
+      width: 100%;
+      height: 200px;
+    }
+    
+    .hobby-info {
+      padding: 1rem;
+    }
+  }

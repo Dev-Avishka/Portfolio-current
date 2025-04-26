@@ -1,207 +1,208 @@
 /* App.css - Tablet and app launcher styling with floating home button */
 
 .frame {
+  width: 95vw;
+  max-width: 2000px;
+  height: 90vh;
+  max-height: 900px;
+  background-color: #3a3a3a;
+  margin: 5vh auto;
+  border-radius: 20px;
+  padding: 12px;
+  box-shadow: 10px 10px 10px rgba(0, 0, 0, 0.5);
+  position: relative;
+  overflow: hidden;
+}
+
+.tablet-screen {
+  width: 100%;
+  height: 100%;
+  background-color: #121212;
+  box-shadow: 10px 10px 10px rgba(0, 0, 0, 0.5);
+  border-radius: 12px;
+  position: relative;
+  overflow: hidden;
+  display: flex;
+  flex-direction: column;
+}
+
+.status-bar {
+  height: 30px;
+  width: 100%;
+  background-color: rgba(0, 0, 0, 0.5);
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 0 15px;
+  color: white;
+  font-size: 12px;
+  z-index: 20;
+}
+
+.status-left {
+  display: flex;
+  align-items: center;
+}
+
+.status-right {
+  display: flex;
+  align-items: center;
+}
+
+.status-icon {
+  margin-left: 8px;
+}
+
+.content-area {
+  flex: 1;
+  width: 100%;
+  position: relative;
+  overflow: hidden;
+}
+
+.home-button-container {
+  position: absolute;
+  bottom: 20px;
+  right: 20px;
+  z-index: 30;
+}
+
+.home-button {
+  width: 50px;
+  height: 50px;
+  border-radius: 50%;
+  background-color: rgba(50, 50, 50, 0.8);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  cursor: pointer;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3);
+  border: 1px solid rgba(255, 255, 255, 0.2);
+  transition: transform 0.2s, background-color 0.2s;
+}
+
+.home-button:hover {
+  transform: scale(1.05);
+  background-color: rgba(60, 60, 60, 0.9);
+}
+
+.home-button-inner {
+  width: 20px;
+  height: 20px;
+  border: 2px solid white;
+  border-radius: 5px;
+}
+
+.app-grid {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  grid-gap: 15px;
+  padding: 20px;
+  height: 100%;
+  overflow-y: auto;
+  justify-items: center;
+  padding-bottom: 20px; /* Reduced padding without nav bar */
+}
+
+.app-icon {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  cursor: pointer;
+  transition: transform 0.2s;
+  width: 80px;
+}
+
+.app-icon:hover {
+  transform: scale(1.05);
+}
+
+.icon-image {
+  width: 60px;
+  height: 60px;
+  background-color: transparent;
+  border-radius: 15px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-bottom: 8px;
+  overflow: hidden;
+}
+
+.app-icon-img {
+  width: 100%;
+  height: 100%;
+  object-fit: contain;
+}
+
+.app-name {
+  color: white;
+  font-size: 12px;
+  text-align: center;
+  word-wrap: break-word;
+  max-width: 100%;
+}
+
+.app-container {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: white;
+  z-index: 5;
+  animation: slide-up 0.3s ease;
+}
+
+@keyframes slide-up {
+  from {
+    transform: translateY(100%);
+  }
+  to {
+    transform: translateY(0);
+  }
+}
+
+/* Responsive adjustments */
+@media (max-width: 900px) {
+  .app-grid {
+    grid-template-columns: repeat(3, 1fr);
+    padding: 20px;
+  }
+}
+
+@media (max-width: 600px) {
+  .frame {
     width: 95vw;
-    max-width: 2000px;
-    height: 90vh;
-    max-height: 900px;
-    background-color: #3a3a3a;
-    margin: 5vh auto;
-    border-radius: 20px;
-    padding: 12px;
-    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.3);
-    position: relative;
-    overflow: hidden;
-  }
-  
-  .tablet-screen {
-    width: 100%;
-    height: 100%;
-    background-color: #121212;
-    border-radius: 12px;
-    position: relative;
-    overflow: hidden;
-    display: flex;
-    flex-direction: column;
-  }
-  
-  .status-bar {
-    height: 30px;
-    width: 100%;
-    background-color: rgba(0, 0, 0, 0.5);
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    padding: 0 15px;
-    color: white;
-    font-size: 12px;
-    z-index: 20;
-  }
-  
-  .status-left {
-    display: flex;
-    align-items: center;
-  }
-  
-  .status-right {
-    display: flex;
-    align-items: center;
-  }
-  
-  .status-icon {
-    margin-left: 8px;
-  }
-  
-  .content-area {
-    flex: 1;
-    width: 100%;
-    position: relative;
-    overflow: hidden;
-  }
-  
-  .home-button-container {
-    position: absolute;
-    bottom: 20px;
-    right: 20px;
-    z-index: 30;
-  }
-  
-  .home-button {
-    width: 50px;
-    height: 50px;
-    border-radius: 50%;
-    background-color: rgba(50, 50, 50, 0.8);
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    cursor: pointer;
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3);
-    border: 1px solid rgba(255, 255, 255, 0.2);
-    transition: transform 0.2s, background-color 0.2s;
-  }
-  
-  .home-button:hover {
-    transform: scale(1.05);
-    background-color: rgba(60, 60, 60, 0.9);
-  }
-  
-  .home-button-inner {
-    width: 20px;
-    height: 20px;
-    border: 2px solid white;
-    border-radius: 5px;
+    height: 85vh;
+    margin: 3vh auto;
   }
   
   .app-grid {
-    display: grid;
-    grid-template-columns: repeat(4, 1fr);
-    grid-gap: 15px;
-    padding: 20px;
-    height: 100%;
-    overflow-y: auto;
-    justify-items: center;
-    padding-bottom: 20px; /* Reduced padding without nav bar */
-  }
-  
-  .app-icon {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    cursor: pointer;
-    transition: transform 0.2s;
-    width: 80px;
-  }
-  
-  .app-icon:hover {
-    transform: scale(1.05);
+    grid-template-columns: repeat(3, 1fr);
+    grid-gap: 10px;
+    padding: 15px;
   }
   
   .icon-image {
-    width: 60px;
-    height: 60px;
-    background-color: transparent;
-    border-radius: 15px;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    margin-bottom: 8px;
-    overflow: hidden;
+    width: 50px;
+    height: 50px;
   }
   
-  .app-icon-img {
-    width: 100%;
-    height: 100%;
-    object-fit: contain;
+  .home-button-container {
+    bottom: 15px;
+    right: 15px;
   }
   
-  .app-name {
-    color: white;
-    font-size: 12px;
-    text-align: center;
-    word-wrap: break-word;
-    max-width: 100%;
+  .home-button {
+    width: 45px;
+    height: 45px;
   }
-  
-  .app-container {
-    position: absolute;
-    top: 0;
-    left: 0;
-    width: 100%;
-    height: 100%;
-    background-color: white;
-    z-index: 5;
-    animation: slide-up 0.3s ease;
+}
+
+@media (max-width: 480px) {
+  .app-grid {
+    grid-template-columns: repeat(2, 1fr);
+    grid-gap: 15px;
   }
-  
-  @keyframes slide-up {
-    from {
-      transform: translateY(100%);
-    }
-    to {
-      transform: translateY(0);
-    }
-  }
-  
-  /* Responsive adjustments */
-  @media (max-width: 900px) {
-    .app-grid {
-      grid-template-columns: repeat(3, 1fr);
-      padding: 20px;
-    }
-  }
-  
-  @media (max-width: 600px) {
-    .frame {
-      width: 95vw;
-      height: 85vh;
-      margin: 3vh auto;
-    }
-    
-    .app-grid {
-      grid-template-columns: repeat(3, 1fr);
-      grid-gap: 10px;
-      padding: 15px;
-    }
-    
-    .icon-image {
-      width: 50px;
-      height: 50px;
-    }
-    
-    .home-button-container {
-      bottom: 15px;
-      right: 15px;
-    }
-    
-    .home-button {
-      width: 45px;
-      height: 45px;
-    }
-  }
-  
-  @media (max-width: 480px) {
-    .app-grid {
-      grid-template-columns: repeat(2, 1fr);
-      grid-gap: 15px;
-    }
-  }
+}

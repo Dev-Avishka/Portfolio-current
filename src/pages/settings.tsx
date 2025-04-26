@@ -17,6 +17,9 @@ export default function Settings(){
                 <div className='bar'>
                     <h2>MIT License</h2>
                 </div>
+                <div className='bar'>
+                    <h2>Auto Update Age based on Birth day</h2>
+                </div>
 
                 <Footer></Footer>
             </div>

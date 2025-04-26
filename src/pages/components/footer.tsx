@@ -15,6 +15,9 @@ export default function Footer(){
             <a href='https://github.com/Dev-Avishka' rel="noopener noreferrer" onClick={(e) => e.stopPropagation()} target="_blank" className='insta'>
                 <img src='github.png' alt='github' />
             </a>
+            <a href='https://www.linkedin.com/in/dev-avishka-65ba5a325/' rel="noopener noreferrer" onClick={(e) => e.stopPropagation()} target="_blank" className='linkedin'>
+                <img src='linkedin.png' alt='linkedin' />
+            </a>
         </div>
     )
 }
