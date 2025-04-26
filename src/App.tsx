@@ -20,11 +20,16 @@ import Education from './pages/education';
 import Hobbies from './pages/hobbies';
 import Resume from './pages/resume';
 import Cloud from './pages/cloud';
+import Blog from './pages/blog';
+import appstore from './icons/appstore.png'
+import Store from './pages/store';
+
+
 function App() {
   const [currentApp, setCurrentApp] = useState("home");
   const [showHomeScreen, setShowHomeScreen] = useState(true);
   const [currentTime, setCurrentTime] = useState(new Date());
-  
+  const iscloudinstalled = localStorage.getItem('installed_cloud') !== null;
   // App definitions
   const apps = [
     { id: "about", name: "About Me", icon: about },
@@ -34,11 +39,15 @@ function App() {
     { id: "education", name: "Education", icon: edu },
     { id: "resume", name: "Resume", icon: resume },
     { id: "blog", name: "Blog", icon: blog },
-    { id: "cloud", name: "Cloud", icon: cloud },
+    
     { id: "hobbies", name: "Hobbies", icon: hobbies },
-    { id: "settings", name: "Settings", icon: settings }
+    { id: "settings", name: "Settings", icon: settings },
+    { id: "store", name: "App Store", icon: appstore }
   ];
-  
+  if (iscloudinstalled == true){
+    apps.push({ id: "cloud", name: "Cloud", icon: cloud });
+  }
+
   // Update time every minute
   useEffect(() => {
     const timer = setInterval(() => {
@@ -87,6 +96,10 @@ function App() {
         return <Resume />;
       case "cloud":
         return <Cloud />
+      case "blog":
+        return <Blog />
+      case "store":
+        return <Store />
       default:
         return <div className="app">App "{currentApp}" coming soon!</div>;
     }
@@ -138,6 +151,9 @@ function App() {
             </div>
           </div>
         </div>
+      </div>
+      <div className='bottomtext'>
+        <h1>Hey I am Dev Avihka Go through each app and Appstore to find info about me</h1>
       </div>
     </>
   );

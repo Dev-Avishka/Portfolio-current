@@ -14,7 +14,7 @@ export default function Skills(){
                     <img src='skills/c-sharp.png' style={{ width:'60px'}} alt='C#'></img> 
                     <img src='skills/Go.png' style={{ width:'60px'}} alt='GO'></img> 
                     <img src='skills/Kotlin.png' style={{ width:'60px'}} alt='Kotlin'></img> 
-                    <img src='skills/typescript.png' style={{ width:'60px'}} alt='Kotlin'></img> 
+                    <img src='skills/typescript.png' style={{ width:'60px'}} alt='Type Script'></img> 
                     <img src='skills/dart.png' style={{ width:'60px'}} alt='Dart'></img> 
                 </div>
             </div>

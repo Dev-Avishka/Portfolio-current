@@ -1,5 +1,24 @@
 /* App.css - Tablet and app launcher styling with floating home button */
 
+/* Add particle background */
+body {
+  margin: 0;
+  padding: 0;
+  background-color: #000;
+  position: relative;
+  overflow: hidden;
+}
+
+/* Create the particle canvas */
+#particles-background {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  z-index: -1;
+}
+
 .frame {
   width: 95vw;
   max-width: 2000px;
@@ -12,6 +31,7 @@
   box-shadow: 10px 10px 10px rgba(0, 0, 0, 0.5);
   position: relative;
   overflow: hidden;
+  z-index: 1;
 }
 
 .tablet-screen {
@@ -58,6 +78,21 @@
   width: 100%;
   position: relative;
   overflow: hidden;
+  background-image: url('./assets/wallpaper.jpg');
+  background-size: cover;
+  background-position: center;
+}
+
+.app-grid {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  grid-gap: 15px;
+  padding: 20px;
+  height: 100%;
+  overflow-y: auto;
+  justify-items: center;
+  padding-bottom: 20px; /* Reduced padding without nav bar */
+  background: rgba(0, 0, 0, 0.3); /* Semi-transparent overlay to make icons more visible */
 }
 
 .home-button-container {
@@ -91,17 +126,6 @@
   height: 20px;
   border: 2px solid white;
   border-radius: 5px;
-}
-
-.app-grid {
-  display: grid;
-  grid-template-columns: repeat(4, 1fr);
-  grid-gap: 15px;
-  padding: 20px;
-  height: 100%;
-  overflow-y: auto;
-  justify-items: center;
-  padding-bottom: 20px; /* Reduced padding without nav bar */
 }
 
 .app-icon {
@@ -141,6 +165,7 @@
   text-align: center;
   word-wrap: break-word;
   max-width: 100%;
+  text-shadow: 1px 1px 3px rgba(0, 0, 0, 0.8); /* Make text more readable on the wallpaper */
 }
 
 .app-container {
@@ -205,4 +230,15 @@
     grid-template-columns: repeat(2, 1fr);
     grid-gap: 15px;
   }
+}
+
+.bottomtext{
+  margin-top: 30px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  color: #fff;
+  position: relative;
+  z-index: 1;
 }

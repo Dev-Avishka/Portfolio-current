@@ -16,9 +16,8 @@ export default function Cloud(){
   const [selectedItem, setSelectedItem] = useState<GalleryItem | null>(null);
   const [loading, setLoading] = useState<boolean>(true);
 
-  // Simulating loading gallery items
   useEffect(() => {
-    // This is just a simulation - in a real app, you'd fetch the actual files
+    
     const mockGalleryItems: GalleryItem[] = [
       { id: 1, type: 'image', src: '/gallery/1.jpg', alt: 'Gallery Image 1' },
       { id: 2, type: 'image', src: '/gallery/2.jpg', alt: 'Gallery Image 2' },
@@ -44,11 +43,11 @@ export default function Cloud(){
   return (
     <div className="app">
       <div className="gallery-container">
-        <h1 className="gallery-title">Media Gallery</h1>
+        <h1 className="gallery-title">Cloud Items</h1>
         
         {loading ? (
           <div className="gallery-loading">
-            <p>Loading gallery items...</p>
+            <p>Loading Cloud items...</p>
           </div>
         ) : (
           <div className="gallery-grid">
