@@ -25,6 +25,8 @@ import appstore from './icons/appstore.png'
 import Store from './pages/store';
 import Calc from './pages/calc';
 import calc from './icons/calculator.svg'
+import work from './icons/work.png'
+import Experience from './pages/experience';
 function App() {
   const [currentApp, setCurrentApp] = useState("home");
   const [showHomeScreen, setShowHomeScreen] = useState(true);
@@ -40,7 +42,7 @@ function App() {
     { id: "education", name: "Education", icon: edu },
     { id: "resume", name: "Resume", icon: resume },
     { id: "blog", name: "Blog", icon: blog },
-    
+    { id: "exp", name: "Experience", icon: work },
     { id: "hobbies", name: "Hobbies", icon: hobbies },
     { id: "settings", name: "Settings", icon: settings },
     { id: "store", name: "App Store", icon: appstore },
@@ -105,6 +107,8 @@ function App() {
         return <Store />
       case "calc":
         return <Calc />
+      case "exp":
+        return <Experience />
       default:
         return <div className="app">App "{currentApp}" coming soon!</div>;
     }
