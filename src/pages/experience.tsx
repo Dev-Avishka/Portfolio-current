@@ -20,7 +20,7 @@ export default function Experience(){
     return (
       <div className="app">
         <div className="timeline-container">
-          <h1 className="timeline-title">My experienceal Journey</h1>
+          <h1 className="timeline-title">My Experience</h1>
           <br></br>
           <div className="timeline-single-column">
             {experienceData.map((item, index) => (
