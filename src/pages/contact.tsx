@@ -61,10 +61,10 @@ export default function Contact() {
                             <span className="info-label">Email:</span>
                             <a href="mailto:dabdissanayake@gmail.com">dabdissanayake@gmail.com</a>
                         </div>
-                        <div className="info-item">
+                        {/* <div className="info-item">
                             <span className="info-label">Phone:</span>
                             <a href="tel:+94722744040">+94 (722) 744040</a>
-                        </div>
+                        </div> */}
                     </div>
                 </div>
                 
