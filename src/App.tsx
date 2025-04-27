@@ -23,13 +23,14 @@ import Cloud from './pages/cloud';
 import Blog from './pages/blog';
 import appstore from './icons/appstore.png'
 import Store from './pages/store';
-
-
+import Calc from './pages/calc';
+import calc from './icons/calculator.svg'
 function App() {
   const [currentApp, setCurrentApp] = useState("home");
   const [showHomeScreen, setShowHomeScreen] = useState(true);
   const [currentTime, setCurrentTime] = useState(new Date());
   const iscloudinstalled = localStorage.getItem('installed_cloud') !== null;
+  const iscalcinstalled = localStorage.getItem('installed_calc') !== null;
   // App definitions
   const apps = [
     { id: "about", name: "About Me", icon: about },
@@ -42,12 +43,14 @@ function App() {
     
     { id: "hobbies", name: "Hobbies", icon: hobbies },
     { id: "settings", name: "Settings", icon: settings },
-    { id: "store", name: "App Store", icon: appstore }
+    { id: "store", name: "App Store", icon: appstore },
   ];
   if (iscloudinstalled == true){
     apps.push({ id: "cloud", name: "Cloud", icon: cloud });
   }
-
+  if (iscalcinstalled == true){
+    apps.push({ id: "calc", name: "Calculator", icon: calc });
+  }
   // Update time every minute
   useEffect(() => {
     const timer = setInterval(() => {
@@ -100,6 +103,8 @@ function App() {
         return <Blog />
       case "store":
         return <Store />
+      case "calc":
+        return <Calc />
       default:
         return <div className="app">App "{currentApp}" coming soon!</div>;
     }

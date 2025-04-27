@@ -1,121 +1,154 @@
 /* store.css */
 
 .store-app {
-    background-color: #f8f9fa;
-    color: #333;
-    padding: 16px;
-    height: 100%;
-    overflow-y: auto;
-  }
-  
-  .store-header {
-    margin-bottom: 24px;
-    text-align: center;
-    padding: 16px 0;
-    border-bottom: 1px solid #ddd;
-  }
-  
-  .store-header h1 {
-    margin: 0;
-    font-size: 28px;
-    color: #333;
-  }
-  
-  .store-subtitle {
-    margin: 8px 0 0;
-    color: #666;
-    font-size: 16px;
-  }
-  
-  .store-container {
-    display: flex;
-    flex-direction: column;
-    gap: 16px;
-    padding-bottom: 80px; /* Add bottom padding for home button */
-  }
-  
+  background-color: #f8f9fa;
+  color: #333;
+  padding: 16px;
+  height: 100%;
+  overflow-y: auto;
+}
+
+.store-header {
+  margin-bottom: 24px;
+  text-align: center;
+  padding: 16px 0;
+  border-bottom: 1px solid #ddd;
+}
+
+.store-header h1 {
+  margin: 0;
+  font-size: 28px;
+  color: #333;
+}
+
+.store-subtitle {
+  margin: 8px 0 0;
+  color: #666;
+  font-size: 16px;
+}
+
+.store-container {
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+  padding-bottom: 80px; /* Add bottom padding for home button */
+}
+
+.app-card {
+  display: flex;
+  align-items: center;
+  background-color: white;
+  border-radius: 12px;
+  padding: 16px;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+  transition: transform 0.2s;
+}
+
+.app-card:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.15);
+}
+
+.app-icon-large {
+  font-size: 40px;
+  margin-right: 16px;
+  width: 60px;
+  height: 60px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background-color: #f0f0f0;
+  border-radius: 12px;
+}
+
+.app-info {
+  flex: 1;
+}
+
+.app-title {
+  margin-left: 30px;
+  margin-bottom: 5px;
+  font-size: 18px;
+}
+
+.app-description {
+  margin-left: 30px;
+  color: #666;
+  font-size: 14px;
+  line-height: 1.4;
+}
+
+.install-button {
+  background-color: #0066ff;
+  color: white;
+  border: none;
+  border-radius: 8px;
+  padding: 12px 20px;
+  font-size: 14px;
+  font-weight: 600;
+  cursor: pointer;
+  transition: background-color 0.2s;
+}
+
+.install-button:hover {
+  background-color: #0055dd;
+}
+
+.install-button.uninstall {
+  background-color: #e0e0e0;
+  color: #333;
+}
+
+.install-button.uninstall:hover {
+  background-color: #d0d0d0;
+}
+
+/* Progress indicator styles */
+.progress-container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  min-width: 100px;
+}
+
+.progress-circle {
+  width: 44px;
+  height: 44px;
+}
+
+.progress-circle-bg {
+  stroke: #e6e6e6;
+}
+
+.progress-circle-path {
+  stroke: #0066ff;
+  stroke-linecap: round;
+  transition: stroke-dashoffset 0.1s ease;
+}
+
+.progress-text {
+  margin-top: 8px;
+  font-size: 12px;
+  color: #666;
+}
+
+/* Responsive adjustments */
+@media (max-width: 600px) {
   .app-card {
-    display: flex;
-    align-items: center;
-    background-color: white;
-    border-radius: 12px;
-    padding: 16px;
-    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
-    transition: transform 0.2s;
-  }
-  
-  .app-card:hover {
-    transform: translateY(-2px);
-    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.15);
+    flex-direction: column;
+    text-align: center;
   }
   
   .app-icon-large {
-    font-size: 40px;
-    margin-right: 16px;
-    width: 60px;
-    height: 60px;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    background-color: #f0f0f0;
-    border-radius: 12px;
+    margin: 0 0 12px;
   }
   
   .app-info {
-    flex: 1;
+    margin-bottom: 16px;
   }
   
-  .app-title {
-    margin-left: 30px;
-    margin-bottom: 5px;
-    font-size: 18px;
+  .progress-container {
+    margin-top: 12px;
   }
-  
-  .app-description {
-
-    margin-left: 30px;
-    color: #666;
-    font-size: 14px;
-    line-height: 1.4;
-  }
-  
-  .install-button {
-    background-color: #0066ff;
-    color: white;
-    border: none;
-    border-radius: 8px;
-    padding: 12px 20px;
-    font-size: 14px;
-    font-weight: 600;
-    cursor: pointer;
-    transition: background-color 0.2s;
-  }
-  
-  .install-button:hover {
-    background-color: #0055dd;
-  }
-  
-  .install-button.uninstall {
-    background-color: #e0e0e0;
-    color: #333;
-  }
-  
-  .install-button.uninstall:hover {
-    background-color: #d0d0d0;
-  }
-  
-  /* Responsive adjustments */
-  @media (max-width: 600px) {
-    .app-card {
-      flex-direction: column;
-      text-align: center;
-    }
-    
-    .app-icon-large {
-      margin: 0 0 12px;
-    }
-    
-    .app-info {
-      margin-bottom: 16px;
-    }
-  }
+}
