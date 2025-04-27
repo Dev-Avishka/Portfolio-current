@@ -142,30 +142,30 @@ export default function Blog() {
     }
 
     // Render blog content elements
-    function renderBlogContent(blogContent: ParsedBlog) {
-        return blogContent.content.map((item, index) => {
-            switch (item.type) {
-                case 'divider':
-                    return <hr key={index} className="blog-divider" />;
-                case 'image':
-                    return (
-                        <div key={index} className="blog-image-container">
-                            <img src={item.src} alt="Blog illustration" className="blog-image" />
-                        </div>
-                    );
-                case 'heading1':
-                    return <h1 key={index} className="blog-heading-1">{item.formattedText || item.text}</h1>;
-                case 'heading2':
-                    return <h2 key={index} className="blog-heading-2">{item.formattedText || item.text}</h2>;
-                case 'paragraph':
-                    return <p key={index} className="blog-paragraph">{item.formattedText || item.text}</p>;
-                case 'bulletPoint':
-                    return <li key={index} className="blog-bullet-point">{item.formattedText || item.text}</li>;
-                default:
-                    return null;
-            }
-        });
-    }
+    // function renderBlogContent(blogContent: ParsedBlog) {
+    //     return blogContent.content.map((item, index) => {
+    //         switch (item.type) {
+    //             case 'divider':
+    //                 return <hr key={index} className="blog-divider" />;
+    //             case 'image':
+    //                 return (
+    //                     <div key={index} className="blog-image-container">
+    //                         <img src={item.src} alt="Blog illustration" className="blog-image" />
+    //                     </div>
+    //                 );
+    //             case 'heading1':
+    //                 return <h1 key={index} className="blog-heading-1">{item.formattedText || item.text}</h1>;
+    //             case 'heading2':
+    //                 return <h2 key={index} className="blog-heading-2">{item.formattedText || item.text}</h2>;
+    //             case 'paragraph':
+    //                 return <p key={index} className="blog-paragraph">{item.formattedText || item.text}</p>;
+    //             case 'bulletPoint':
+    //                 return <li key={index} className="blog-bullet-point">{item.formattedText || item.text}</li>;
+    //             default:
+    //                 return null;
+    //         }
+    //     });
+    // }
 
     // Organize blog content in proper list structures
     function organizeContent(blogContent: ParsedBlog) {
