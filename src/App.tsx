@@ -27,12 +27,15 @@ import Calc from './pages/calc';
 import calc from './icons/calculator.svg'
 import work from './icons/work.png'
 import Experience from './pages/experience';
+import Tictactoe from './pages/tictactoe';
+import tic from './icons/tic.png'
 function App() {
   const [currentApp, setCurrentApp] = useState("home");
   const [showHomeScreen, setShowHomeScreen] = useState(true);
   const [currentTime, setCurrentTime] = useState(new Date());
   const iscloudinstalled = localStorage.getItem('installed_cloud') !== null;
   const iscalcinstalled = localStorage.getItem('installed_calc') !== null;
+  const isticinstalled = localStorage.getItem('installed_tic') !== null;
   // App definitions
   const apps = [
     { id: "about", name: "About Me", icon: about },
@@ -52,6 +55,9 @@ function App() {
   }
   if (iscalcinstalled == true){
     apps.push({ id: "calc", name: "Calculator", icon: calc });
+  }
+  if(isticinstalled == true){
+    apps.push({id:"tic",name:"TicTacToe",icon:tic})
   }
   // Update time every minute
   useEffect(() => {
@@ -109,6 +115,8 @@ function App() {
         return <Calc />
       case "exp":
         return <Experience />
+      case "tic":
+        return <Tictactoe />
       default:
         return <div className="app">App "{currentApp}" coming soon!</div>;
     }

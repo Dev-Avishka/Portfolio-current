@@ -1,0 +1,112 @@
+/* Tic-tac-toe game styling */
+
+.game {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    font-family: 'Arial', sans-serif;
+    max-width: 400px;
+    margin: 0 auto;
+    padding: 20px;
+    background-color: #f7f7f7;
+    border-radius: 10px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+  }
+  
+  .game-info {
+    margin-bottom: 20px;
+    text-align: center;
+  }
+  
+  .game-info h1 {
+    color: #333;
+    margin-bottom: 10px;
+    font-size: 28px;
+  }
+  
+  .status {
+    font-size: 18px;
+    font-weight: bold;
+    margin-bottom: 10px;
+    color: #444;
+  }
+  
+  .first-player {
+    font-size: 16px;
+    color: #666;
+    margin-bottom: 15px;
+  }
+  
+  .board {
+    display: grid;
+    grid-template-rows: repeat(3, 1fr);
+    gap: 8px;
+    margin-bottom: 20px;
+  }
+  
+  .board-row {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 8px;
+  }
+  
+  .square {
+    background: #fff;
+    border: 2px solid #ddd;
+    border-radius: 8px;
+    width: 80px;
+    height: 80px;
+    font-size: 36px;
+    font-weight: bold;
+    line-height: 80px;
+    padding: 0;
+    text-align: center;
+    transition: all 0.2s;
+    cursor: pointer;
+  }
+  
+  .square:hover {
+    background-color: #f0f0f0;
+  }
+  
+  .square.x {
+    color: #e74c3c;
+  }
+  
+  .square.o {
+    color: #3498db;
+  }
+  
+  .square.winning {
+    background-color: #e8f4fd;
+    border-color: #3498db;
+    animation: pulse 1s infinite;
+  }
+  
+  .reset-button {
+    background-color: #3498db;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    padding: 10px 20px;
+    font-size: 16px;
+    cursor: pointer;
+    transition: background-color 0.2s;
+  }
+  
+  .reset-button:hover {
+    background-color: #2980b9;
+  }
+  
+  @keyframes pulse {
+    0% {
+      opacity: 1;
+    }
+    50% {
+      opacity: 0.8;
+    }
+    100% {
+      opacity: 1;
+    }
+  }

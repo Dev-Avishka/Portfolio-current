@@ -5,6 +5,7 @@ import './styles/store.css';
 // Import icons (you'll need to create or have these icons in your project)
 import cloud from '../icons/cloud.png';
 import calc from '../icons/calculator.svg';
+import tic from '../icons/tic.png';
 
 // Define interfaces for our data types
 interface StoreApp {
@@ -53,6 +54,12 @@ export default function Store(){
             title: 'Calculator',
             description: 'Do Arithmatic logic',
             icon: calc
+        },
+        {
+            id: 'tic',
+            title: 'TicTacToe',
+            description: 'Play a simple game of TicTacToe',
+            icon: tic
         }
     ];
     
